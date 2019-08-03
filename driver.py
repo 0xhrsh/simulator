@@ -1,3 +1,4 @@
+f=open("data.csv","w")
 from pprint import pprint
 from straight import Straight
 from turn import turnRight
@@ -12,4 +13,5 @@ for i in range(100):
 		data+=turnLeft(n=2)
 	else:
 		data+=turnRight(n=2)
-pprint(data)
+f.write(str(data))
+f.close()
